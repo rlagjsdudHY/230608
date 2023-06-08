@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+@import url('style_Reset.css');
+
+/* 상품 목록 페이지 시작 */
+header#header {	padding: 10px 30px; justify-content: space-between;	}
+h1 {	margin: 20px 0;	}
+
+ul#mainMenu li {	height: 40px;	line-height: 70px; padding: 0 30px;
+					 border: 1px solid #000;  transform: translateY(20px);		}
+ul#mainMenu li a {	font-size: 20px; font-weight: bold;
+					display: inline-block;
+					transform: translateY(-14px);	}					 
+ul#mainMenu li:hover a { color: #888; }
+ul#mainMenu li:nth-child(1) {	border-right: none;	}
+
+div.headerArea {	width: 100%;	font-size: 19px; font-weight: bold; 
+					margin-top: 20px; 
+					background-color: rgba(128, 128, 128, 0.2);	}
+div.headerArea span {	color: #08f;	line-height: 46px;	}	
+div.colArea {	width: 100%;	border-bottom: 1px solid #aaa;}
+div.colArea span {	font-size: 19px;	line-height: 40px;
+					text-align: center;		}					
+div.colArea span:nth-child(1) {	width: 70px;	}					
+div.colArea span:nth-child(2) { width: 70px;	}					
+div.colArea span:nth-child(3) { flex: 1;	}					
+div.colArea span:nth-child(4) { width: 100px;	}
+div.colArea span:nth-child(5) { width: 100px;	}
+div.colArea span:nth-child(6) { width: 80px;	}
+div.colArea span:nth-child(7) { width: 140px;	}
+
+div.colArea input.chkDel {	width: 20px; height: 20px;	
+							transform: translateY(4px); }
+
+/* 목록페이지 버튼 시작 */
+div#searchArea {	padding: 10px; margin: 10px; 
+					justify-content: space-between;	}			
+#searchArea button {	font-size: 16px;	padding: 4px 16px;	}
+#searchArea button:hover {	font-weight: bold; cursor: pointer;	}	
+#searchArea span {	font-size: 20px; margin-right: 16px;	}
+#searchArea input[type=text] {	width: 150px; font-size: 20px; 
+								padding: 4px 10px; margin-right: 16px;	}
+
+/* 목록페이지 버튼 끝 */
+
+
+
+/* 상품 목록 페이지 끝 */
+
+
+
+
+/* 상품등록 페이지 시작 */
+div#wrapReg {	width: 500px;     padding: 10px;
+    			border: 4px solid #aaa;		border-radius: 4px;
+    			margin: 10px auto;		}
+#wrapReg header {	justify-content: space-between;	}
+#wrapReg header h1 {	font-size: 28px;	text-align: left;	}    			
+table#regTbl {	width: 400px;	border-collapse: collapse;	}
+#regTbl th {		font-size: 19px; text-align: left;
+					padding: 10px 10px 10px 30px;
+					background-color: rgba(0, 136, 255, 0.1);	}
+#regTbl td {		padding: 6px;	 padding: 6px 10px 6px 20px;	}
+#regTbl input {	width: 180px; font-size: 19px; padding: 6px 10px	}
+#regTbl td#btnArea {	text-align: center;	} 
+
+#regTbl button {	width: 100px; font-size: 18px;	font-weight: bold; padding: 8px 16px;	}
+#regTbl button:hover {	cursor: pointer;	}	
+#regTbl span {	font-size: 14px; margin-right: 8px;	}
+
+/* 상품등록 페이지 끝 */
+
+
+
+/* 글 내용보기=뷰페이지=상세보기  시작 */
+
+ul#contentUL {	margin: 20px 10px;	} 
+
+ul#contentUL li {	font-size: 19px;	
+					line-height: 34px;}
+
+ul#contentUL li>span:nth-child(1) {	
+	font-weight: bold;
+}
+/* 글 내용보기=뷰페이지=상세보기 끝 */
+
+
+

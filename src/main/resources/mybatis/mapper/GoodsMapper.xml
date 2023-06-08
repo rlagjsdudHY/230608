@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.qd09.dao.GoodsDao">
+
+ 	<!-- 상품 목록 태그 -->
+	<select id="mtdGoodsList" resultType="com.qd09.dto.GoodsDto">
+		select * from goodsList order by num desc
+	</select>
+
+ 	<!-- 상품 등록 태그 -->
+	<insert id="mtdGoodsReg">
+		insert into goodsList 
+		(goodsCode, goodsName, price, cnt, regTM) 
+		values 
+		(#{param1}, #{param2}, #{param3}, #{param4}, now())
+	</insert>
+	
+	<!-- 상품 검색 태그 -->
+	<select id="mtdGoodsSearch" resultType="com.qd09.dto.GoodsDto">
+		select * from goodsList 
+		where goodsCode like concat('%', #{param1},'%') 
+		or goodsName like concat('%',  #{param1}, '%') 
+		order by num desc   
+	</select>
+	
+	<!-- 상품 삭제 태그 -->
+	<delete id="mtdGoodsDelete">
+		delete from goodsList 
+		<where>
+			<foreach item="item" index="index" collection="array"
+		        open="num in (" separator="," close=")">
+		          #{item}
+		    </foreach> 	
+		</where>
+	</delete>
+	 	
+
+</mapper>	
